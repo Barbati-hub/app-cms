@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+
+      Páginas
+     
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">      
+        Páginas       
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <app-menu></app-menu>
+  <div id="container">
+   
+    <h2 class="display-4">Páginas</h2>
+
+
+    <ion-list>
+      <ion-item style="color: rgb(36, 5, 122);">
+        <ion-label>Nome</ion-label>
+        <ion-label>Restrita</ion-label>
+        <ion-label>Login ?</ion-label>
+        <ion-label>Home ?</ion-label>
+       
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item *ngFor="let pagina of paginas">
+        <ion-label>{{pagina.nome}}</ion-label>
+        <ion-label>{{pagina.areaRestrita  ? "Sim" : "Não"}}</ion-label>
+        <ion-label>{{pagina.login ? "Sim" : "Não"}}</ion-label>
+        <ion-label>{{pagina.home ? "Sim" : "Não"}}</ion-label>
+       
+      </ion-item>
+    </ion-list>
+    
+
+  </div>
+</ion-content>
